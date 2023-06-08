@@ -1,0 +1,17 @@
+.help h3 span {
+    color: #e0752f;
+}
+.help h3{
+    font-weight: 700;
+}
+section.help {
+    padding: 144px 0px;
+}
+
+.help .container-fluid {
+    border-left: 32px solid #E0752F;
+    border-right: 32px solid transparent;
+    padding: 20px 0px;
+}
+
+.help p{font-family: 'Roboto', sans-serif!important; letter-spacing: 0.22px;color: #343434;}

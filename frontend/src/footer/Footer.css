@@ -1,0 +1,10 @@
+.text-right {
+    text-align: right;
+}
+
+section.footer {
+    background: #343434;
+    color: #DCE1DA;
+    font: normal normal normal 16px/28px Roboto;
+    letter-spacing: 0.22px;
+}

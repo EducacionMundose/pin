@@ -1,0 +1,53 @@
+.hiring {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f2f4f1+0,f2f4f1+75,dce1da+75,dce1da+100 */
+    background: #f2f4f1;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #f2f4f1 0%, #f2f4f1 70%, #dce1da 70%, #dce1da 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #f2f4f1 0%, #f2f4f1 70%, #dce1da 70%, #dce1da 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #f2f4f1 0%, #f2f4f1 70%, #dce1da 70%, #dce1da 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f4f1', endColorstr='#dce1da', GradientType=1);
+    /* IE6-9 */
+}
+
+.orange {
+    color: #e0752f;
+}
+
+.hiring h3 {
+    font-weight: 600;
+}
+
+.btn-orange {
+    background: #E0752F 0% 0% no-repeat padding-box;
+    border-radius: 25px;
+    opacity: 1;
+    border: 0;
+    padding: 13px 54px;
+    font-size: 16px;
+    letter-spacing: 0.22px;
+}
+.btn{width:max-content}
+.btn-orange:active {
+    background: #bd5917 0% 0% no-repeat padding-box;
+}
+
+.btn-orange:hover {
+    background: #eb7e35 0% 0% no-repeat padding-box;
+}
+.hiring img{width: 100%;}
+input.form-control, textarea.form-control {
+    background: transparent!important;
+    border: 0;
+    border-bottom: 1px solid #93939396;
+    color: #5f6368;
+    border-radius: 0;
+    padding: 10px 0px;
+    font-family: 'Roboto', sans-serif;
+    width: 90%;
+}
+textarea.form-control{resize: none;}
+form{grid-gap: 22px;display: grid;}
+.img-container{display: flex;align-items: center;}
