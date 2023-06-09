@@ -1,0 +1,21 @@
+image: 
+  name: roxsross12/aws_eks_tools
+  entrypoint: [""]
+
+variables:
+  AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+  AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+  AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+  CLUSTER: "training-tf-cluster"
+
+stages:
+  - deploy
+
+deploy-to_eks:
+  stage: deploy
+  script:
+    - aws eks update-kubeconfig --region $AWS_DEFAULT_REGION --name $CLUSTER
+    - kubectl apply -f example-nginx-deployment.yaml   
+  only:
+    - master
+

@@ -1,0 +1,32 @@
+name: Deploy AWS EKS
+
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      cluster: "training-tf-cluster"
+    steps:
+      - uses: actions/checkout@v3
+       
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+          
+      - uses: azure/setup-kubectl@v3
+        with:
+           version: 'v1.25.9' 
+        id: install
+        
+      - name: Update Kubeconfig
+        run: aws eks update-kubeconfig --name ${{ env.cluster }} --region us-east-1
+
+      - name: Deploy To AWS EKS 
+        run: kubectl apply -f example-nginx-deployment.yaml            
